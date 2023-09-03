@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+   <title>Yummy</title>
+</head>
+<body>
+    <!--nav -->
+  
+    <nav>
+      <div class="nav-content  ">
+       <div class="nav-links ">
+        <ul class="list-unstyled ">
+          <li class="search-btn  ">
+            <a  href=""class=" ">Search</a>
+          </li>
+          <li  class="category-btn ">
+            <a href="" class="animate__animated animate__slideInUp">Categories</a>
+          </li>
+          <li class="area-btn ">
+            <a  href="" class="animate__animated animate__slideInUp">Area</a>
+          </li>
+          <li class="ingred-btn ">
+            <a  href="" class="animate__animated animate__slideInUp">Ingredients</a>
+          </li>
+          <li class="contact-btn ">
+            <a  href="" class="animate__animated animate__slideInUp">Contact Us</a>
+          </li>
+        </ul>
+       </div>
+       <div class="nav-icons text-center">
+        <span>
+          <i class="fa-brands fa-facebook"></i>
+        </span>
+        <span>
+          <i class="fa-brands fa-twitter"></i>
+        </span>
+        <span>
+          <i class="fa-solid fa-globe"></i>
+        </span>
+        <div class="text">
+          <p class="text-white ">Copyright <span class="m-0 text-warning fs-6">Â© 2019</span>  All Rights
+            Reserved.</p>
+         </div>
+       </div>
+       
+      </div>
+      <div class="nav-btns bg-white  d-flex flex-column justify-content-between">
+        <div class="nav-logo   mx-auto mt-3">
+          <img src="img/logo.png" alt="" class="w-100">
+        </div>
+        <div class="mainBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="close-Btn  mx-auto d-none ">
+          <i class="fa-solid fa-close fs-3"></i>
+        </div>
+        <div class="main-icons p-2 ">
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>        </div>
+      </div>
+    </nav>
+    <!--   -->
+  <header class="bg-black " id="header">
+    <div class="header-content ">
+      <div class="container">
+        <div class="row " id="rowData">
+
+          
+         
+            
+ 
+           
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!--search-->
+<section id="search" class="bg-black">
+  <div class="container">
+    <div class="row" id="searchInputs">
+   <div class="col-md-6">
+    <div class="searchInput">
+      <input  type="text" placeholder="search Meals By Name" class="py-2 px-3 form-control my-3 text-muted bg-transparent  search-name">
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class="searchInput">
+      <input type="text" placeholder="search Meals By First Letter" class="py-2 px-3 form-control my-3 text-muted bg-transparent search-letter ">
+    </div>
+   </div>
+    </div>
+    <div class="row" id="searcMealsName">
+  
+    </div>
+    <div class="row" id="searcMealsletter">
+  
+    </div>
+   
+  </div>
+
+</section>
+  <!--display Categries-->
+  <section id="categories" class="d-none">
+   <div class="cateories-content">
+    <div class="container">
+      <div class="row" id="categoryData">
+
+      </div>
+    </div>
+   </div>
+  </section>
+<!--display categMeals-->
+
+<section id="categMeals" class="bg-black d-none" >
+ <div class="container">
+  <div class="row" id="meals">
+
+  </div>
+ </div>
+</section>
+<!--Area-->
+<section id="Area" class="bg-black d-none" >
+  <div class="container">
+   <div class="row" id="namesArea">
+  
+   </div>
+  </div>
+ </section>
+ 
+ <!-- display areaMeals-->
+ <section id="AreaMeals" class="bg-black d-none" >
+  <div class="container">
+   <div class="row" id="mealsArea">
+     
+   </div>
+  </div>
+ </section>
+ 
+<!-- Ingredient-->
+<section id="ingredient" class="bg-black d-none" >
+  <div class="container">
+   <div class="row" id="ingredientCategory">
+     
+   </div>
+  </div>
+ </section>
+
+
+ <!--display ingredientMeals-->
+ <section id="ingredientMeals" class="bg-black d-none" >
+  <div class="container">
+   <div class="row" id="ingredientMeal">
+     
+   </div>
+  </div>
+ </section>
+
+
+ <!-- contact us-->
+ <section id="contact" class="bg-black d-flex justify-content-center align-items-center d-none">
+  <div class="container d-flex flex-column justify-content-center align-items-center  ">
+    <div class="row flex-wrap w-75 mx-auto  " id="contactRow">
+       <div class=" col-md-6 my-3 ">
+        <div class="field">
+          <input type="text" placeholder="Enter Your Name " class="p-2 form-control   mx-auto" id="userName" >
+          <p class="alert alert-danger my-1 p-2 d-none">userName must start with captial char[A-Z]</p>
+        </div>
+       </div>
+       <div class=" col-md-6 my-3">
+        <div class="field">
+          <input type="email" placeholder="Enter Your e-mail " class="p-2 form-control   mx-auto " id="userMail">
+          <p class="alert alert-danger mail-alert my-1 p-2 d-none">userMail must start with small char[a-z] at Least 3 char and contain @gmail.com or @yahoo.com</p>
+
+        </div>
+       </div>
+       <div class=" col-md-6 my-3">
+        <div class="field">
+          <input type="tel" placeholder="Enter Your Phone " class="p-2 form-control   mx-auto " id="userPhone">
+          <p class="alert alert-danger phone-alert my-1 p-2 d-none ">userPhone must start with 010 or 011 or 012 then 8 numbers</p>
+
+        </div>
+       </div>
+       <div class=" col-md-6 my-3">
+        <div class="field">
+          <input type="number" placeholder="Enter Your Age " class="p-2 form-control   mx-auto " min="0" max="80"
+          id="userAge">
+        </div>
+       </div>
+       <div class=" col-md-6 my-3">
+        <div class="field">
+          <input type="password" placeholder="Enter Your password " class="p-2 form-control   mx-auto " id="userPassword">
+          <p class="alert alert-danger password-alert my-1 p-2 d-none ">userPassword must start with 3 char[a-z] 1 char[A-Z] at least 2 numbers or more and  $ or # or @ or &</p>
+
+        </div>
+       </div>
+       <div class=" col-md-6 my-3">
+        <div class="field">
+          <input type="password" placeholder="rePassword " class="p-2 form-control   mx-auto " id="rePassword">
+          <p class="alert alert-danger repassword-alert my-1 p-2 d-none ">rePassword must equal password</p>
+
+        </div>
+       </div>
+
+    </div>
+    <button class="py-2 px-3 bg-danger bg-opacity-50 text-white border-0 btn-outline-0  rounded-pill my-3 disabled" type="submit" title="disabled">Submit</button>
+
+  </div>
+ </section>
+
+<!--display mealDetails-->
+ <section id="mealDetail" class="bg-black text-white position-relative d-none">
+  <i class="fa-solid fa-close fs-3 text-danger position-absolute top-2 end-0 p-2 close"></i>
+
+    <div class="row mx-5 p-5 " id="mealRow">
+      
+      </div>
+    </div>
+  </div>
+
+ </section>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js" ></script>
+    <script  type="module" src="js/main.js"  ></script>
+</body>
+</html>

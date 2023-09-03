@@ -1,0 +1,36 @@
+let allAreaCategories;
+
+//get meals by area
+ export async function getAreaCategories(areaName) {
+    let response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${areaName}`);
+    let finalResponse = await response.json();
+     allAreaCategories = finalResponse.meals;
+    //  console.log(allAreaCategories)
+     displayAreaCategories(allAreaCategories)
+}
+
+
+
+function displayAreaCategories(allAreaCategories) {
+    let cartoona = '';
+    for (let i = 0; i < allAreaCategories.length; i++){
+        cartoona += `
+        <div class="col-md-3 item    my-3 overflow-hidden  rounded-2 p-3">
+        <div class="inner w-100  position-relative ">
+          <div class="meal-img ">
+            <img src="${allAreaCategories[i].strMealThumb}" alt="" class="w-100">
+          </div>
+        
+        <div class="meal-layer bg-white bg-opacity-75 position-absolute start-0 top-0 end-0 bottom-0 rounded-2 d-flex justify-content-center align-items-center text-center text-white">
+          <div class="layer-content p-2 ">
+            <h2 class="my-2 text-black str-category fs-5 ">${allAreaCategories[i].strMeal}</h2>
+
+            </div>
+          </div>
+        </div>
+      </div> 
+      `
+        
+    }
+    document.getElementById('mealsArea').innerHTML=cartoona
+}
