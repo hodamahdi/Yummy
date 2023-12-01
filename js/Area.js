@@ -20,7 +20,7 @@ function displayMealsArea(allArea) {
          <div class="col-md-3 area  text-center p-3 ">
         <div class="inner  text-white p-5">
           <i class="fa-solid fa-house-laptop fa-4x"></i>
-          <h3 class="areaName">${allArea[i].strArea}</h3>
+          <h6 class="areaName">${allArea[i].strArea}</h6>
         </div>
      </div>
 
@@ -40,7 +40,7 @@ areaBtn.addEventListener('click', function () {
     document.getElementById('Area').classList.remove('d-none');
     document.getElementById('AreaMeals').classList.replace('d-block', 'd-none');
     document.getElementById('ingredient').classList.add('d-none');
-  document.getElementById('ingredientMeals').classList.replace('d-block', 'd-none');
+    document.getElementById('ingredientMeals').classList.replace('d-block', 'd-none');
     document.getElementById('search').classList.add('d-none');
     document.getElementById('header').classList.add('d-none');
 
@@ -63,9 +63,19 @@ function getAreaName() {
     for (let i = 0; i < areaItems.length; i++) {
         areaItems[i].addEventListener('click', function (e) {
             // console.log(e.target)
-            areaName = document.querySelectorAll('h3')[i].innerHTML;
+            areaName = document.querySelectorAll('h6')[i].innerHTML;
+            // console.log(areaName)
             
-            getAreaCategories(areaName)
+            getAreaCategories(areaName);
+            document.getElementById('categories').classList.add('d-none');
+            document.getElementById('categMeals').classList.add('d-none');
+            document.getElementById('Area').classList.add('d-none');
+            document.getElementById('AreaMeals').classList.remove('d-none');
+           document.getElementById('ingredient').classList.add('d-none');
+            document.getElementById('ingredientMeals').classList.add('d-none');
+            document.getElementById('contact').classList.add('d-none');
+            document.getElementById('header').classList.add('d-none');
+
 
         })
     

@@ -40,6 +40,7 @@ ingredBtn.addEventListener('click', function () {
   document.getElementById('search').classList.add('d-none');
   document.getElementById('contact').classList.add('d-none');
   document.getElementById('mealDetail').classList.add('d-none');
+  document.getElementById('header').classList.add('d-none');
 
 
 })
@@ -53,15 +54,17 @@ function getIngredientName() {
         mealItems[i].addEventListener('click', function (e) {
             // console.log(e.target)
             mealIngredient = document.querySelectorAll('h2')[i].innerHTML;
-            // console.log(mealIngredient)
+            //  console.log(mealIngredient)
             getFilterIngrdient(mealIngredient)
              document.getElementById('categories').classList.add('d-none');
              document.getElementById('categMeals').classList.add('d-none');
              document.getElementById('Area').classList.add('d-none');
              document.getElementById('AreaMeals').classList.add('d-none');
             document.getElementById('ingredient').classList.add('d-none');
-            document.getElementById('ingredientMeals').classList.add('d-none');
-             document.getElementById('header').classList.add('d-none');
+            document.getElementById('ingredientMeals').classList.remove('d-none');
+            document.getElementById('contact').classList.add('d-none');
+
+            //  document.getElementById('header').classList.add('d-none');
 
 
         

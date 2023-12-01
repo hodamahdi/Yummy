@@ -8,12 +8,12 @@ export let submitBtn = document.querySelector('button');
 let contactBtn = document.querySelector('.contact-btn');
 contactBtn.addEventListener('click', function () {
     document.getElementById('contact').classList.remove('d-none');
-    document.getElementById('categories').classList.replace('d-block', 'd-none');
-    document.getElementById('categMeals').classList.replace('d-block', 'd-none');
+    document.getElementById('categories').classList.add('d-none');
+    document.getElementById('categMeals').classList.add('d-none');
     document.getElementById('Area').classList.add('d-none');
-    document.getElementById('AreaMeals').classList.replace('d-block', 'd-none');
+    document.getElementById('AreaMeals').classList.add('d-none');
     document.getElementById('ingredient').classList.add('d-none');
-  document.getElementById('ingredientMeals').classList.replace('d-block', 'd-none');
+  document.getElementById('ingredientMeals').classList.add('d-none');
     document.getElementById('search').classList.add('d-none');
     document.getElementById('header').classList.add('d-none');
 

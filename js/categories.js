@@ -16,7 +16,7 @@ export async function getCategories() {
 
 //display categories
 function displayCategories(allCategories) {
-    
+
     let cartoona = '';
      for (let i = 0; i < allCategories.length; i++){
          cartoona += `
@@ -30,7 +30,7 @@ function displayCategories(allCategories) {
            <div class="layer-content p-2 ">
              <h2 class="my-2 text-black str-category fs-5 ">${allCategories[i].strCategory}</h2>
                   <p class="category-desc text-muted fs-6 ">${allCategories[i].strCategoryDescription}</p>
-
+                 
              </div>
            </div>
          </div>
@@ -52,7 +52,7 @@ $(categoryBtn).click(function () {
     document.getElementById('ingredient').classList.add('d-none');
   document.getElementById('ingredientMeals').classList.replace('d-block', 'd-none');
     document.getElementById('search').classList.add('d-none');
-    document.getElementById('header').classList.add('d-none');
+   document.getElementById('header').classList.add('d-none');
 
 
 
@@ -60,21 +60,24 @@ $(categoryBtn).click(function () {
 })
 
 function getCategMeals() {
-    let mealItems = document.querySelectorAll('.categItem ')
+    let mealItems = document.querySelectorAll('.categItem')
     
     for (let i = 0; i < mealItems.length; i++) {
       mealItems[i].addEventListener('click', function (e) {
-        // console.log(e.target)
-     
-    mealCateg = document.querySelectorAll('h2')[i].innerHTML;
-            filterCategories(mealCateg);
-            document.getElementById('categories').classList.replace('d-block', 'd-none');
-        document.getElementById('categMeals').classList.replace('block', 'd-none');
+        //  console.log(e.target)
+      mealCateg = document.querySelectorAll('h2')[i].innerHTML;
+        // console.log(mealCateg)
+        filterCategories(mealCateg);
+        // document.getElementById('header').classList.add('d-none');
+
+        document.getElementById('categories').classList.add('d-none');
+        document.getElementById('categMeals').classList.remove('d-none');
         document.getElementById('Area').classList.add('d-none');
         document.getElementById('AreaMeals').classList.add('d-none');
        document.getElementById('ingredient').classList.add('d-none');
-       document.getElementById('ingredientMeals').classList.add('d-none');
-        document.getElementById('header').classList.add('d-none');
+        document.getElementById('ingredientMeals').classList.add('d-none');
+        document.getElementById('contact').classList.add('d-none');
+
 
 
 
